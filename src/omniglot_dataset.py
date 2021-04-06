@@ -149,7 +149,7 @@ class OmniglotDataset(data.Dataset):
             zip_ref.close()
         file_processed = os.path.join(self.root, self.processed_folder)
         for p in ['images_background', 'images_evaluation']:
-            for f in listdir(os.path.join(orig_root, p)):
+            for f in os.listdir(os.path.join(orig_root, p)):
                 shutil.move(os.path.join(orig_root, p, f), file_processed)
             os.rmdir(os.path.join(orig_root, p))
         print("Download finished.")

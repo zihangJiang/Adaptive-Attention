@@ -3,8 +3,33 @@ Code for paper [Few-shot Classification via Adaptive Attention](https://arxiv.or
 
 To process and get the mini-ImageNet dataset, please refer to this [repo](https://github.com/yaoyao-liu/mini-imagenet-tools).
 
+### Pipeline
+
+
+
+### ![Pipeline](Pipeline.png)
+
+### Result
+
+![Result_omni](Result_omni.png)
+
+![Result_cub](Result_cub.png)
+
+![Result_mini](Result_mini.png)
+
+![Visualization](Visualization.png)
+
 ### Usage
-Once you get the dataset (take mini-ImageNet for example), please use src/mini_imagenet_dataset.py to split the dataset. The processed dataset will be placed in /dataset/MiniImageNet by default. Then you can run `train.sh Mini` to train a Conv-64F model in 5 way 1 shot setting.
+pytorch 0.4.0 is required
+
+
+For Omniglot:
+
+Directly run  `bash train.sh omni`.
+
+For mini-ImageNet and others:
+
+Once you get the dataset (take mini-ImageNet for example), please use src/mini_imagenet_dataset.py to split the dataset. The processed dataset will be placed in /dataset/MiniImageNet by default. Then you can run `bash train.sh Mini` to train a Conv-64F model in 5 way 1 shot setting.
 
 For more options, please refer to the code.
 
